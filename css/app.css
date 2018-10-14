@@ -38,10 +38,12 @@ h1 {
  */
 
 .deck {
-    width: 660px;
-    min-height: 680px;
+    max-width: 660px;
+    max-height: 660px;
+    width: 100%;
+    padding-bottom: 75%;
     background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
-    padding: 32px;
+    padding: 12px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
     display: flex;
@@ -52,8 +54,6 @@ h1 {
 }
 
 .deck .card {
-    height: 125px;
-    width: 125px;
     background: #2e3d49;
     font-size: 0;
     color: #ffffff;
@@ -63,6 +63,9 @@ h1 {
     justify-content: center;
     align-items: center;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    width: 135px;
+    height: 135px;
+    margin: 12px;
 }
 
 .deck .card.open {
@@ -87,15 +90,17 @@ h1 {
 
 .score-panel {
     text-align: left;
-    width: 345px;
+    max-width: 345px;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .score-panel .stars {
-    margin: 0;
+    width: 30%;
     padding: 0;
     display: inline-block;
     margin: 0 5px 0 0;
+    text-align: center;
 }
 
 .score-panel .stars li {
@@ -103,7 +108,29 @@ h1 {
     display: inline-block;
 }
 
+.score-panel .counter {
+    width: 30%;
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+}
+
 .score-panel .restart {
     float: right;
     cursor: pointer;
+    width: 30%;
+    text-align: center;
 }
+
+@media screen and (max-width: 660px){
+    .deck {
+        padding: 0px !important;
+        box-shadow: none !important;
+    } 
+    .card {
+        width: 21vmin !important;
+        height: 21vmin !important;
+        margin: 2vmin !important;
+        box-shadow: none !important;
+    }
+} 
