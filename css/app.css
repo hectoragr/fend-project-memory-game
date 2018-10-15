@@ -41,7 +41,6 @@ h1 {
     max-width: 660px;
     max-height: 660px;
     width: 100%;
-    padding-bottom: 75%;
     background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     padding: 12px;
     border-radius: 10px;
@@ -50,7 +49,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 3em;
+    margin: 0 0 1em;
 }
 
 .deck .card {
@@ -66,12 +65,14 @@ h1 {
     width: 135px;
     height: 135px;
     margin: 12px;
+    transition-duration: 0.5s;
 }
 
 .deck .card.open {
     transform: rotateY(0);
     background: #02b3e4;
     cursor: default;
+    transition-duration: 0.5s;
 }
 
 .deck .card.show {
@@ -82,6 +83,9 @@ h1 {
     cursor: default;
     background: #02ccba;
     font-size: 33px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
 }
 
 /*
@@ -120,6 +124,13 @@ h1 {
     cursor: pointer;
     width: 30%;
     text-align: center;
+}
+
+footer {
+    max-width: 660px;
+    max-height: 660px;
+    width: 100%;
+    padding: 12px;
 }
 
 @media screen and (max-width: 660px){
